@@ -30,7 +30,6 @@ if(CATKIN_CALL)
     INCLUDE_DIRS include
     LIBRARIES mrdplot logger
     CATKIN_DEPENDS roscpp roslib
-    DEPENDS Eigen3 
   )
 else()
   include_directories(
