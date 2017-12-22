@@ -18,7 +18,8 @@ else()
   set(CMAKE_RUNTIME_OUTPUT_DIRECTORY  ${CMAKE_SOURCE_DIR}/bin)
 endif()
 
-set(CMAKE_CXX_FLAGS "-std=c++0x -g ${CMAKE_CXX_FLAGS}")
+set(CMAKE_CXX_FLAGS "-std=c++11 ${CMAKE_CXX_FLAGS}")
+set(CMAKE_BUILD_TYPE "Release")
 
 if(CATKIN_CALL)
   include_directories(
@@ -43,13 +44,11 @@ add_library(mrdplot src/mrdplot.cpp)
 
 add_library(CLMCLogger src/CLMCLogger.cpp)
 target_link_libraries(CLMCLogger)
-set_target_properties(CLMCLogger PROPERTIES COMPILE_FLAGS "-std=c++0x -g -o3")     
 
 
 ## Declare a cpp library
 add_library(logger src/Logger.cpp)
 target_link_libraries(logger mrdplot CLMCLogger )
-set_target_properties(logger PROPERTIES COMPILE_FLAGS "-std=c++0x -g -o3")     
         
 ## Tests and Examples:
 add_executable(testMRD test/test.cpp)
