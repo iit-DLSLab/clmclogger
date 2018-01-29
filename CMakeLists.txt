@@ -29,7 +29,7 @@ if(CATKIN_CALL)
 
   catkin_package(
     INCLUDE_DIRS include
-    LIBRARIES mrdplot logger
+    LIBRARIES mrdplot logger CLMCLogger
     CATKIN_DEPENDS roscpp roslib
   )
 else()
