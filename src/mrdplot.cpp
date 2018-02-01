@@ -144,7 +144,7 @@ bool MRDPlot::writeToFile(const std::string &name)
     out.close();
   }
   catch (std::ofstream::failure e) {
-    std::cerr << "error when writing data\n";
+    std::cerr << e.what() <<"error when writing data\n";
   }
 
 }

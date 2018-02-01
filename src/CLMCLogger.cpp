@@ -197,7 +197,7 @@ bool CLMCLogger::writeToFile(const std::string &name, const std::string &filePat
 
   }
   catch (std::ofstream::failure e) {
-    std::cerr << "error when writing data\n";
+    std::cerr << "error when writing data " << e.what() << std::endl;
   }
 
   return true;
