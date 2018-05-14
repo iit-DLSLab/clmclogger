@@ -4,14 +4,14 @@ project(clmclogger)
 # Checking if the project is compiling with Catkin or CMake
 set(CATKIN_CALL "${CATKIN_DEVEL_PREFIX}")
 if(CATKIN_CALL)
-  message("Compiling clmclogger library as a Catkin project")
+  message(STATUS "Compiling clmclogger library as a Catkin project")
   find_package(catkin REQUIRED COMPONENTS
     roscpp
     roslib
     std_msgs
   )
 else()
-  message("Compiling clmclogger library as a CMake project")
+  message(STATUS "Compiling clmclogger library as a CMake project")
   # Setting the output directories for libraries and executables
   set(CMAKE_LIBRARY_OUTPUT_DIRECTORY  ${CMAKE_SOURCE_DIR}/lib)
   set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY  ${CMAKE_SOURCE_DIR}/lib)
